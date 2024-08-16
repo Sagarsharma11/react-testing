@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import App from "./App";
 import { act } from 'react';
 
-test("test first react app", ()=>{
+test("other first react app", ()=>{
   act(() => {
     render(<App />);
   });
@@ -12,7 +12,7 @@ test("test first react app", ()=>{
   expect(title).toBeInTheDocument();
 })
 
-test("Testing input box",()=>{
+test("other input box",()=>{
   act(() => {
     render(<App />);
   });
