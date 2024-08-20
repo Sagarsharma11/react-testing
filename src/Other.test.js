@@ -25,3 +25,79 @@ test("other input box",()=>{
   expect(checkInput).toHaveAttribute("type", "text")
   expect(checkInput).toHaveAttribute("value", "sagar")
 })
+
+describe("UI testing, test group 1", ()=>{
+  test("test case 1",()=>{
+    act(() => {
+      render(<App />);
+    });
+    let checkInput = screen.getByRole("textbox");
+    let checkInputPlaceHolder = screen.getByPlaceholderText("Enter User Name")
+    expect(checkInput).toBeInTheDocument();
+    expect(checkInputPlaceHolder).toBeInTheDocument();
+    expect(checkInput).toHaveAttribute("name", "username");
+  })
+  test("test case 2",()=>{
+    act(() => {
+      render(<App />);
+    });
+    let checkInput = screen.getByRole("textbox");
+    let checkInputPlaceHolder = screen.getByPlaceholderText("Enter User Name")
+    expect(checkInput).toBeInTheDocument();
+    expect(checkInputPlaceHolder).toBeInTheDocument();
+    expect(checkInput).toHaveAttribute("name", "username");
+  })
+  test("test case 3",()=>{
+    act(() => {
+      render(<App />);
+    });
+    let checkInput = screen.getByRole("textbox");
+    let checkInputPlaceHolder = screen.getByPlaceholderText("Enter User Name")
+    expect(checkInput).toBeInTheDocument();
+    expect(checkInputPlaceHolder).toBeInTheDocument();
+    expect(checkInput).toHaveAttribute("name", "username");
+  })
+})
+
+describe.only("API testing, test group 1", ()=>{
+  test("test case 1",()=>{
+    act(() => {
+      render(<App />);
+    });
+    let checkInput = screen.getByRole("textbox");
+    let checkInputPlaceHolder = screen.getByPlaceholderText("Enter User Name")
+    expect(checkInput).toBeInTheDocument();
+    expect(checkInputPlaceHolder).toBeInTheDocument();
+    expect(checkInput).toHaveAttribute("name", "username");
+  })
+  test("test case 2",()=>{
+    act(() => {
+      render(<App />);
+    });
+    let checkInput = screen.getByRole("textbox");
+    let checkInputPlaceHolder = screen.getByPlaceholderText("Enter User Name")
+    expect(checkInput).toBeInTheDocument();
+    expect(checkInputPlaceHolder).toBeInTheDocument();
+    expect(checkInput).toHaveAttribute("name", "username");
+  })
+  test("test case 3",()=>{
+    act(() => {
+      render(<App />);
+    });
+    let checkInput = screen.getByRole("textbox");
+    let checkInputPlaceHolder = screen.getByPlaceholderText("Enter User Name")
+    expect(checkInput).toBeInTheDocument();
+    expect(checkInputPlaceHolder).toBeInTheDocument();
+    expect(checkInput).toHaveAttribute("name", "username");
+  })
+
+  describe("Inner test group",()=>{
+        act(() => {
+      render(<App />);
+    });
+    let checkInput = screen.getByRole("textbox");
+    let checkInputPlaceHolder = screen.getByPlaceholderText("Enter User Name")
+    expect(checkInput).toBeInTheDocument();
+  })
+
+})
