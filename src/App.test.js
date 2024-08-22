@@ -2,14 +2,22 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import React,{act} from 'react';
 import App from './App';
 
-test.only("Change event testing", () => {
-  act(() => {
-    render(<App />);
-  });
-  let input = screen.getByRole("textbox");
-  fireEvent.change(input, { target: { value: "a" } });
-  expect(input.value).toBe("a");
-});
+
+test.only("onClick event testing",()=>{
+  render(<App/>);
+  const btn = screen.getByRole("button");
+  fireEvent.click(btn);
+  expect(screen.getByText("Name Sagar")).toBeInTheDocument()
+})
+
+// test.only("Change event testing", () => {
+//   act(() => {
+//     render(<App />);
+//   });
+//   let input = screen.getByRole("textbox");
+//   fireEvent.change(input, { target: { value: "a" } });
+//   expect(input.value).toBe("a");
+// });
 
 
 
