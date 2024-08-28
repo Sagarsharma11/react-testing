@@ -3,11 +3,44 @@ import React,{act} from 'react';
 import App from './App';
 
 
-test.only("onClick event testing",()=>{
+// beforeAll(()=>{
+//   console.log("before all hook")
+// })
+
+
+beforeEach(()=>{
+  console.log("before each hook")
+})
+
+test.only("onClick event testing 1",()=>{
+  console.log(1)
   render(<App/>);
   const btn = screen.getByRole("button");
   fireEvent.click(btn);
   expect(screen.getByText("Name Sagar")).toBeInTheDocument()
+})
+
+test.only("onClick event testing 2",()=>{
+  console.log(2)
+  render(<App/>);
+  const btn = screen.getByRole("button");
+  fireEvent.click(btn);
+  expect(screen.getByText("Name Sagar")).toBeInTheDocument()
+})
+test.only("onClick event testing 3",()=>{
+  console.log(3)
+  render(<App/>);
+  const btn = screen.getByRole("button");
+  fireEvent.click(btn);
+  expect(screen.getByText("Name Sagar")).toBeInTheDocument()
+})
+
+// afterAll(()=>{
+//   console.log("after all hook")
+// })
+
+afterEach(()=>{
+  console.log("after each hook")
 })
 
 // test.only("Change event testing", () => {
